@@ -218,7 +218,8 @@ export class Manager extends Disposable {
 				relative: relative,
 				debug: debug,
 			};
-			this.openServer();
+			this._serverTaskProvider.globalRunTask();
+			//this.openServer(true);
 		} else {
 			this.launchFileInEmbeddedPreview(file, relative, panel);
 		}
